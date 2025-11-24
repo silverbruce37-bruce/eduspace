@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppStage } from '../types';
-import { Rocket, Compass, FileText, Tv, Menu, X } from 'lucide-react';
+import { Rocket, BookOpen, Compass, FileText, Tv, Menu, X } from 'lucide-react';
 
 interface SidebarProps {
   currentStage: AppStage;
@@ -12,6 +12,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ currentStage, setStage, isOpen, setIsOpen }) => {
   const menuItems = [
     { id: AppStage.MISSION_CONTROL, label: 'Mission Control', icon: <Rocket size={20} /> },
+    { id: AppStage.KNOWLEDGE_BASE, label: 'Knowledge Base', icon: <BookOpen size={20} /> },
     { id: AppStage.ORIENTEERING, label: 'Orienteering', icon: <Compass size={20} /> },
     { id: AppStage.THESIS, label: 'Thesis Builder', icon: <FileText size={20} /> },
     { id: AppStage.LAUNCHPAD, label: 'TED Launchpad', icon: <Tv size={20} /> },
